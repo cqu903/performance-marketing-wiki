@@ -25,6 +25,12 @@ confidence: high
 - iOS 事件还要关注 AEM 条件；若 AEM 不合格，检查事件是否映射到所有媒体源、Meta 事件管理器连接方式，以及等待 2-3 天生效。
 - Meta 数据差异通常来自归因窗口、隐私限制、事件去重/延迟和平台自归因口径。
 
+## iOS 隐私下的事件设计
+- SKAN 转化值只覆盖安装后早期窗口，贷款 App 应优先放入能在 24-48 小时内稳定触发的质量信号：注册完成、申请开始、资料提交、初审通过。
+- ATT 未授权用户缺 IDFA，广告平台更依赖汇总/建模信号；事件命名、触发时机和来源范围要稳定，避免频繁改定义。
+- S2S 深层事件如果用于 Meta AEM，要确认 IP、IDFV、IDFA 空/全零处理符合 Meta 要求；否则事件可能不合格。
+- 放款成功适合做价值校验和后端 cohort 分析，但量级不足时不宜直接作为 iOS 冷启动唯一优化目标。详见 [[ios-privacy-skan-aem]]。
+
 ## X Wallet 推荐事件层级
 详见 [[xwallet-event-taxonomy]]。简化版：
 1. `af_complete_registration` 或自定义注册完成：量大，适合早期学习。
@@ -43,3 +49,4 @@ confidence: high
 - [[event-source-scope-and-learning]]
 - [[google-vs-meta-integration]]
 - [[data-discrepancy-playbook]]
+- [[ios-privacy-skan-aem]]

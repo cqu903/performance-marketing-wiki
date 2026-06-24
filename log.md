@@ -20,3 +20,8 @@
 - New concept page created: [[event-source-scope-and-learning]]
 - Updated pages: [[postback-and-event-mapping]], [[xwallet-event-taxonomy]], [[ios-privacy-skan-aem]], index.md
 - Extracted decision: selected mid-funnel events can use all media sources during cold start; deep sensitive events should be governed separately and may be narrowed to this-partner-only.
+
+## [2026-06-24] update | iOS privacy, SKAN, ATT, AEM and ad platform impact
+- Expanded [[ios-privacy-skan-aem]] with ATT, SKAN, Meta AEM, Google iOS attribution limits, AppsFlyer reporting impact, platform optimization impact, and X Wallet operating guidance.
+- Updated pages: [[device-identifiers-and-privacy]], [[meta-ads]], [[google-ads]], [[data-discrepancy-playbook]], [[postback-and-event-mapping]], [[xwallet-implementation-checklist]], [[google-vs-meta-integration]], index.md.
+- Repo visibility changed to public: https://github.com/cqu903/appsflyer-attribution-wiki

@@ -22,8 +22,15 @@ confidence: medium
 ## 第 1 步：SDK 与标识符
 - 确认 AppsFlyer SDK 版本。
 - Android：GAID + Google Play Install Referrer 正常。
-- iOS：IDFA 请求策略、IDFV 收集、SKAN/AEM 相关配置确认。
+- iOS：IDFA 请求策略、IDFV 收集、SKAN/AEM 相关配置确认；SDK 版本需支持当前 SKAN 能力。
 - AppsFlyer Raw Data 中能看到 first_open 和基础设备字段。
+
+## 第 1.5 步：iOS 隐私配置
+- 决定 ATT 弹窗策略：是否弹、何时弹、pre-prompt 文案、授权率监控。
+- 设计 SKAN 转化值：优先覆盖注册完成、申请开始、资料提交、初审通过等早期质量事件。
+- Meta AEM：确认关键事件合格，S2S 事件带有效 IP/IDFV，事件来源先用“所有媒体源，包括自然媒体源”。
+- Google iOS：确认 Link ID、`first_open`/关键事件导入；App Campaign、YouTube、Web-to-App、再互动分开看。
+- 报表模板预留四层口径：AppsFlyer 传统归因、AppsFlyer SKAN、广告平台建模/AEM、后端贷款 cohort。
 
 ## 第 2 步：事件字典
 - 按 [[xwallet-event-taxonomy]] 定义事件。
@@ -47,6 +54,7 @@ confidence: medium
 - AppsFlyer：按 media source / campaign / event 看漏斗。
 - Google Ads：first_open 与关键事件状态不应长期 No recent conversion。
 - Meta：事件管理器可见、AEM 合格状态明确。
+- iOS：不以单日数据下结论；常规优化看 3-7 天滚动，SKAN/深层事件复盘看 7-14 天。
 - 差异排查按 [[data-discrepancy-playbook]] 执行。
 
 ## 第 6 步：优化节奏
