@@ -25,3 +25,10 @@
 - Expanded [[ios-privacy-skan-aem]] with ATT, SKAN, Meta AEM, Google iOS attribution limits, AppsFlyer reporting impact, platform optimization impact, and X Wallet operating guidance.
 - Updated pages: [[device-identifiers-and-privacy]], [[meta-ads]], [[google-ads]], [[data-discrepancy-playbook]], [[postback-and-event-mapping]], [[xwallet-implementation-checklist]], [[google-vs-meta-integration]], index.md.
 - Repo visibility changed to public: https://github.com/cqu903/appsflyer-attribution-wiki
+
+## [2026-06-24] ingest | Google Ads API get started documentation
+- Source pages: Google Ads API introduction, quickstart, OAuth overview, developer token, client libraries.
+- Raw articles created: raw/articles/20260624-google-ads-api-get-started.md, raw/articles/20260624-google-ads-api-oauth-token-client-libraries.md.
+- New concept page created: [[google-ads-api]].
+- Updated pages: [[google-ads]], [[agency-and-mcc-governance]], index.md.
+- Key synthesis: Google Ads API is the programmatic account/reporting/operation layer, distinct from AppsFlyer Google Ads integration as attribution/event postback layer.

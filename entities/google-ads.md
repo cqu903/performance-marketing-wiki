@@ -4,13 +4,15 @@ created: 2026-06-24
 updated: 2026-06-24
 type: entity
 tags: [google-ads, srn, integration, event-mapping, cost]
-sources: [raw/articles/115002504686-google-ads-integration.md, raw/articles/4417303339921-google-ads-faq-discrepancies.md, raw/articles/115004970386-google-ads-mcc-multiple-agencies.md]
+sources: [raw/articles/115002504686-google-ads-integration.md, raw/articles/4417303339921-google-ads-faq-discrepancies.md, raw/articles/115004970386-google-ads-mcc-multiple-agencies.md, raw/articles/20260624-google-ads-api-get-started.md, raw/articles/20260624-google-ads-api-oauth-token-client-libraries.md]
 confidence: high
 ---
 
 # Google Ads
 
 Google Ads 是 SRN（Self Reporting Network）。AppsFlyer 不是通过普通点击链接完全独立归因 Google App Campaign，而是使用 Google 授权接口、Link ID、转化导入和事件映射来交换数据。^[raw/articles/115002504686-google-ads-integration.md]
+
+Google Ads API 是另一个层面的能力：它是 Google Ads 的程序化接口，用于账号、广告系列、报告、预算、出价、素材等对象的自动化管理。X Wallet 做投放自主化时，应把 AppsFlyer 对接视为“归因和事件回传层”，把 [[google-ads-api]] 视为“广告账号操作和报告自动化层”。^[raw/articles/20260624-google-ads-api-get-started.md]
 
 ## 必备配置
 - 在 Google Ads 创建 Third-party app analytics 的 Link ID，并选择 AppsFlyer。
@@ -33,7 +35,11 @@ Google Ads 在 iOS 14+ 下不能按旧的设备 ID 逻辑理解所有库存。Go
 ## 多账号/MCC
 同一个 App 的 Android 和 iOS 需要不同 Link ID。多个账号投同一个 App 时，应共享同一个 Link ID，而不是让每个代理各自创建。最高层 MCC 或广告主主账号持有 Link ID 通常更易治理。详见 [[agency-and-mcc-governance]]。
 
+## API 自动化注意点
+如果 X Wallet 要自建 Google Ads 自动化，需要先确认公司是否已有 developer token；Google 通常每家公司授予一个 token。内部自动化优先使用服务账号工作流，并只给必要账号和必要权限。所有写操作（预算、出价、素材、campaign 状态）都应先从测试账号或低风险账号灰度，不应让 agent 直接无审计地改生产投放。详见 [[google-ads-api]]。^[raw/articles/20260624-google-ads-api-oauth-token-client-libraries.md]
+
 ## 相关页面
 - [[google-vs-meta-integration]]
+- [[google-ads-api]]
 - [[postback-and-event-mapping]]
 - [[data-discrepancy-playbook]]
