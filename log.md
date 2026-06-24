@@ -32,3 +32,10 @@
 - New concept page created: [[google-ads-api]].
 - Updated pages: [[google-ads]], [[agency-and-mcc-governance]], index.md.
 - Key synthesis: Google Ads API is the programmatic account/reporting/operation layer, distinct from AppsFlyer Google Ads integration as attribution/event postback layer.
+
+## [2026-06-24] ingest | Meta Marketing API documentation
+- Source pages: Marketing API overview/get started, authorization, authentication, Ads Insights API.
+- Raw articles created: raw/articles/20260624-meta-marketing-api-overview-get-started.md, raw/articles/20260624-meta-marketing-api-auth-insights.md.
+- New concept page created: [[meta-marketing-api]].
+- Updated pages: [[meta-ads]], [[agency-and-mcc-governance]], index.md.
+- Key synthesis: Meta Marketing API is the programmatic ad account/insights/operation layer, distinct from AppsFlyer Meta integration as attribution/event postback/AEM/SKAN layer.
