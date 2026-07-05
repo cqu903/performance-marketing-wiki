@@ -1,10 +1,10 @@
 ---
 title: X Wallet 事件字典建议
 created: 2026-06-24
-updated: 2026-06-24
+updated: 2026-07-05
 type: concept
 tags: [xwallet, event-mapping, postback, data-quality, acquisition]
-sources: [raw/articles/115002504686-google-ads-integration.md, raw/articles/4410480904081-meta-ads-in-app-event-mapping.md, raw/articles/207447163-link-structure-and-parameters.md, raw/articles/20260624-xwallet-af-postback-source-scope-discussion.md]
+sources: [raw/articles/115002504686-google-ads-integration.md, raw/articles/4410480904081-meta-ads-in-app-event-mapping.md, raw/articles/207447163-link-structure-and-parameters.md, raw/articles/20260624-xwallet-af-postback-source-scope-discussion.md, raw/articles/20260705-meta-capi-w2a-credit-lending-review.md]
 confidence: medium
 ---
 
@@ -48,8 +48,15 @@ confidence: medium
 - 稳定后测试审批通过/放款成功作为价值信号，但不要因量太低让算法失去学习能力。
 - Google / Meta 的事件命名和 AppsFlyer 内部事件要维护映射表，防止代理随意改名。
 
+## 后端事件上报规则
+
+信贷核心后置转化（提交申请、风控审核、授信、放款、还款）必须双向同步上报 Meta CAPI 和 AF S2S，严禁二选一。报 Meta CAPI 服务投放优化（矫正模型、降 CPA、分层再营销、提升 EMQ）；报 AF S2S 服务业务总账（绑定业务 ID、核算放款 ROI、财务对账、反作弊）。详见 [[w2a-data-flow]] 和 [[af-vs-meta-capi]]。^[raw/articles/20260705-meta-capi-w2a-credit-lending-review.md]
+
 ## 相关页面
 - [[postback-and-event-mapping]]
 - [[event-source-scope-and-learning]]
 - [[xwallet-implementation-checklist]]
 - [[data-discrepancy-playbook]]
+- [[meta-capi]]
+- [[w2a-data-flow]]
+- [[af-vs-meta-capi]]

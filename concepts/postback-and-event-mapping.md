@@ -1,10 +1,10 @@
 ---
 title: 事件回传与映射
 created: 2026-06-24
-updated: 2026-06-24
+updated: 2026-07-05
 type: concept
 tags: [event-mapping, postback, google-ads, meta-ads, data-quality]
-sources: [raw/articles/115002504686-google-ads-integration.md, raw/articles/4410480904081-meta-ads-in-app-event-mapping.md, raw/articles/4417303339921-google-ads-faq-discrepancies.md, raw/articles/20260624-xwallet-af-postback-source-scope-discussion.md]
+sources: [raw/articles/115002504686-google-ads-integration.md, raw/articles/4410480904081-meta-ads-in-app-event-mapping.md, raw/articles/4417303339921-google-ads-faq-discrepancies.md, raw/articles/20260624-xwallet-af-postback-source-scope-discussion.md, raw/articles/20260705-meta-capi-w2a-credit-lending-review.md]
 confidence: high
 ---
 
@@ -44,9 +44,18 @@ confidence: high
 - Google Ads / Meta 侧能看到对应转化 action/event。
 - 事件来源、归因窗口、币种和时区记录清楚。
 
+## 后端事件：AF postback vs Meta CAPI 原生上报
+
+AppsFlyer 向 Meta 的 postback 中转链路（业务→AF→Meta）存在固有短板：两层转发延迟高、队列易丢事件；AF 仅传设备 ID，无法上传加密手机号/fbp/fbclid 等高精准标识，EMQ 偏低；iOS 无 IDFA 场景归因匹配损耗极大。因此信贷后端深度转化（授信、放款）不能仅依赖 AF 中转回传，必须通过 Meta CAPI 原生上报。AF postback 仅做兜底。详见 [[meta-capi]]、[[af-vs-meta-capi]]。^[raw/articles/20260705-meta-capi-w2a-credit-lending-review.md]
+
+后端事件同步还需上报 AF S2S（绑定用户业务 ID，关联归因来源，核算渠道真实放款 ROI）。后端事件双向同步规则：报 Meta CAPI 服务投放优化，报 AF S2S 服务业务总账，严禁二选一。详见 [[w2a-data-flow]]。
+
 ## 相关页面
 - [[xwallet-event-taxonomy]]
 - [[event-source-scope-and-learning]]
 - [[google-vs-meta-integration]]
 - [[data-discrepancy-playbook]]
 - [[ios-privacy-skan-aem]]
+- [[meta-capi]]
+- [[af-vs-meta-capi]]
+- [[w2a-data-flow]]

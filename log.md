@@ -45,3 +45,10 @@
 - New concept pages: [[onelink-click-tracking]], [[install-attribution-matching]]
 - Updated pages: [[attribution-model]], [[ios-privacy-skan-aem]], [[device-identifiers-and-privacy]], index.md
 - Key synthesis: OneLink 点击上报时机（广告点击 vs H5 二次按钮触点区分）；直跳商店 vs H5 落地页归因差异；商店不参与归因线索存储（全靠点击触点 + SDK 上报双向匹配）；点击阶段网页无权读取 IDFA（仅媒体 App 可传入）；ATT 拒绝后 AF 四层归因（SKAN → af_clickid 精准匹配 → IDFV → 概率指纹），af_clickid 匹配是唯一不依赖 IDFA 的精准归因路径。
+
+## [2026-07-05] ingest | Meta CAPI + AppsFlyer 归因业务复盘（信贷 W2A 专项）
+- Raw source: raw/articles/20260705-meta-capi-w2a-credit-lending-review.md
+- New concept pages: [[meta-capi]], [[w2a-data-flow]]
+- New comparison page: [[af-vs-meta-capi]]
+- Updated pages: [[meta-ads]], [[postback-and-event-mapping]], [[xwallet-event-taxonomy]], [[event-source-scope-and-learning]], [[ios-privacy-skan-aem]], [[xwallet-implementation-checklist]], index.md
+- Key synthesis: 已有 AF 归因仍必须对接 Meta CAPI——AF 是全局归因总账/渠道治理/反作弊，CAPI 是广告投放优化/EMQ 提升/深层转化回传，二者不可替代；信贷 W2A 标准化三层分流（H5 网页层 Pixel+CAPI+AF Web-S2S → App 层 AF SDK+postback 兜底 → 风控后端 CAPI+AF S2S 双向同步）；后端事件（授信/放款）严禁二选一上报；CAPI 携带加密手机号/fbclid/fbp 多维信号提升 EMQ 是 AF postback 无法实现的能力；iOS 无 IDFA 场景需 af_clickid 精准匹配 + CAPI 用户特征信号双向弥补。

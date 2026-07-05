@@ -1,10 +1,10 @@
 ---
 title: X Wallet AppsFlyer 配置实施清单
 created: 2026-06-24
-updated: 2026-06-24
+updated: 2026-07-05
 type: query
 tags: [xwallet, checklist, integration, event-mapping, data-quality]
-sources: [raw/articles/207447053-appsflyer-attribution-model.md, raw/articles/115002504686-google-ads-integration.md, raw/articles/207033826-meta-ads-integration.md, raw/articles/208338403-lookback-windows.md]
+sources: [raw/articles/207447053-appsflyer-attribution-model.md, raw/articles/115002504686-google-ads-integration.md, raw/articles/207033826-meta-ads-integration.md, raw/articles/208338403-lookback-windows.md, raw/articles/20260705-meta-capi-w2a-credit-lending-review.md]
 confidence: medium
 ---
 
@@ -57,7 +57,15 @@ confidence: medium
 - iOS：不以单日数据下结论；常规优化看 3-7 天滚动，SKAN/深层事件复盘看 7-14 天。
 - 差异排查按 [[data-discrepancy-playbook]] 执行。
 
-## 第 6 步：优化节奏
+## 第 6 步：Meta CAPI 对接（信贷 W2A 必须项）
+- 风控后端对接 Meta CAPI，推送授信、放款等深度转化事件。
+- H5 落地页部署 Pixel + CAPI 双轨：Pixel 采集浅层行为，CAPI 上报网页申请提交。
+- CAPI 上报携带 SHA256 加密手机号、fbclid、fbp 等多维信号提升 EMQ。
+- 同一事件同时上报 AF S2S（绑定用户业务 ID，关联归因来源，核算放款 ROI）。
+- AF → Meta postback 仅做兜底，不替代原生 CAPI。
+- 详见 [[meta-capi]]、[[w2a-data-flow]]、[[af-vs-meta-capi]]。^[raw/articles/20260705-meta-capi-w2a-credit-lending-review.md]
+
+## 第 7 步：优化节奏
 - 初期优化注册/申请提交，保证事件量。
 - 稳定后测试审批通过/放款成功作为深层优化或 value signal。
 - 每次改窗口、事件来源、映射关系，都记录日期，避免误判投放效果。
