@@ -1,10 +1,10 @@
 ---
 title: iOS 隐私、SKAN 与 AEM
 created: 2026-06-24
-updated: 2026-06-24
+updated: 2026-07-05
 type: concept
 tags: [privacy, skan, meta-ads, google-ads, data-quality]
-sources: [raw/articles/360011890298-ios14-att-skan-faq.md, raw/articles/19228737402129-meta-ios-aem.md, raw/articles/115002504686-google-ads-integration.md, raw/articles/207447053-appsflyer-attribution-model.md, raw/articles/20260624-xwallet-af-postback-source-scope-discussion.md]
+sources: [raw/articles/360011890298-ios14-att-skan-faq.md, raw/articles/19228737402129-meta-ios-aem.md, raw/articles/115002504686-google-ads-integration.md, raw/articles/207447053-appsflyer-attribution-model.md, raw/articles/20260624-xwallet-af-postback-source-scope-discussion.md, raw/articles/20260705-appsflyer-sdk-onelink-ios-noidfa-full-notes.md]
 confidence: high
 ---
 
@@ -66,9 +66,14 @@ Google Ads 对接前提仍要求应用收集 IDFA / GAID，但 iOS 14+ 后 Googl
 - “把所有深层事件都传给平台就能提升优化”：量级不足或事件滞后会让模型学不到；贷款业务要先保证中浅层质量事件稳定。
 - “iOS 当天数据不好马上停广告”：过早。隐私延迟和建模回填会造成短期误判。
 
+## 无 IDFA 四层匹配补充
+ATT 拒绝追踪后 AF 的四层归因优先级（SKAN → af_clickid 精准匹配 → IDFV 弱关联 → 概率指纹建模）以及点击阶段 IDFA 的可用性边界（网页/浏览器无权限读取，仅媒体 App 可传入）详见 [[install-attribution-matching]]。该文还说明了 af_clickid 匹配是 ATT 拒绝场景下唯一不依赖 IDFA 的精准归因路径，依赖 H5 落地页 + AF SmartScript 缓存链路。
+
 ## 相关页面
 - [[device-identifiers-and-privacy]]
 - [[postback-and-event-mapping]]
 - [[event-source-scope-and-learning]]
 - [[data-discrepancy-playbook]]
 - [[google-vs-meta-integration]]
+- [[install-attribution-matching]]
+- [[onelink-click-tracking]]

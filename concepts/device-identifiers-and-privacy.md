@@ -1,10 +1,10 @@
 ---
 title: 设备标识符与隐私限制
 created: 2026-06-24
-updated: 2026-06-24
+updated: 2026-07-05
 type: concept
 tags: [device-id, privacy, attribution, skan]
-sources: [raw/articles/4408847686161-device-identifiers.md, raw/articles/360011890298-ios14-att-skan-faq.md, raw/articles/207447053-appsflyer-attribution-model.md]
+sources: [raw/articles/4408847686161-device-identifiers.md, raw/articles/360011890298-ios14-att-skan-faq.md, raw/articles/207447053-appsflyer-attribution-model.md, raw/articles/20260705-appsflyer-sdk-onelink-ios-noidfa-full-notes.md]
 confidence: high
 ---
 
@@ -34,7 +34,11 @@ confidence: high
 3. Android 若存在第三方商店/中国大陆包，再单独规划 OAID 和 multi-store；香港 Google Play 版本优先保证 GAID 和 Referrer。
 4. iOS 报表按“传统归因 / SKAN / 平台建模 / 后端实际贷款结果”分层复盘，避免把隐私机制导致的数据缺口当成单一渠道表现。
 
+## IDFA 在点击链路 vs 激活链路的可用性
+IDFA 的可用性不仅受 ATT 影响，还取决于链路阶段：点击广告时，Safari/H5/浏览器 JS 无系统权限读取 IDFA，仅媒体 App（抖音/Meta 等）可在跳转 OneLink 时被动传入；若用户拒绝追踪则传入全零无效值。AF SDK 是全链路唯一稳定获取 IDFA 的渠道。无 IDFA 场景下的四层归因匹配（SKAN → af_clickid → IDFV → 概率指纹）详见 [[install-attribution-matching]]。
+
 ## 相关页面
 - [[attribution-model]]
 - [[ios-privacy-skan-aem]]
 - [[data-discrepancy-playbook]]
+- [[install-attribution-matching]]

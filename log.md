@@ -39,3 +39,9 @@
 - New concept page created: [[meta-marketing-api]].
 - Updated pages: [[meta-ads]], [[agency-and-mcc-governance]], index.md.
 - Key synthesis: Meta Marketing API is the programmatic ad account/insights/operation layer, distinct from AppsFlyer Meta integration as attribution/event postback/AEM/SKAN layer.
+
+## [2026-07-05] ingest | AppsFlyer SDK、OneLink、iOS 无 IDFA 归因全流程笔记
+- Raw source: raw/articles/20260705-appsflyer-sdk-onelink-ios-noidfa-full-notes.md
+- New concept pages: [[onelink-click-tracking]], [[install-attribution-matching]]
+- Updated pages: [[attribution-model]], [[ios-privacy-skan-aem]], [[device-identifiers-and-privacy]], index.md
+- Key synthesis: OneLink 点击上报时机（广告点击 vs H5 二次按钮触点区分）；直跳商店 vs H5 落地页归因差异；商店不参与归因线索存储（全靠点击触点 + SDK 上报双向匹配）；点击阶段网页无权读取 IDFA（仅媒体 App 可传入）；ATT 拒绝后 AF 四层归因（SKAN → af_clickid 精准匹配 → IDFV → 概率指纹），af_clickid 匹配是唯一不依赖 IDFA 的精准归因路径。

@@ -1,7 +1,7 @@
 # Wiki Index
 
 > Content catalog. Every wiki page listed under its type with a one-line summary.
-> Last updated: 2026-06-24 | Total pages: 16
+> Last updated: 2026-07-05 | Total pages: 18
 
 ## Entities
 - [[appsflyer]] — AppsFlyer 在归因、SDK 事件、渠道对接和数据治理中的角色。
@@ -15,9 +15,11 @@
 - [[device-identifiers-and-privacy]] — IDFA、IDFV、GAID、OAID 等设备标识符与隐私限制。
 - [[event-source-scope-and-learning]] — AppsFlyer 事件来源范围如何影响 Google/Meta 学习、客群匹配和 X Wallet 回传策略。
 - [[google-ads-api]] — Google Ads API 的适用场景、developer token、OAuth、客户端库和 X Wallet 自动化落地边界。
+- [[install-attribution-matching]] — 商店无参数时 AF 的点击-安装匹配机制、IDFA 在点击/激活链路的可用性、无 IDFA 四层归因匹配。
 - [[ios-privacy-skan-aem]] — iOS ATT、SKAN、Meta AEM、Google iOS 隐私建模对 AppsFlyer 归因、广告平台优化和 X Wallet 应对措施的影响。
 - [[lookback-window-strategy]] — Google/Meta 回溯窗口建议与 X Wallet 实操策略。
 - [[meta-marketing-api]] — Meta Marketing API 的广告对象结构、权限、Access Tier、token、Insights 和 X Wallet 自动化边界。
+- [[onelink-click-tracking]] — OneLink 点击上报时机、广告点击 vs H5 二次按钮区分、直跳商店 vs H5 落地页归因差异。
 - [[postback-and-event-mapping]] — 关键事件回传、Google 转化导入、Meta 事件映射和验收。
 - [[xwallet-event-taxonomy]] — X Wallet 贷款 App 推荐事件字典与回传优先级。
 
