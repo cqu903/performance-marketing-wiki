@@ -65,6 +65,20 @@
 - Updated pages: [[evc-engaged-view-conversion]]（补三层观测操作细节、EVC vs VT 不可合并、MMP 四项职责 + 两项不属于），index.md（24→25 pages）
 - Key synthesis: EVC 观测分三层（Google Ads 原生看板拉 EVC 转化/CPA/ROAS → MMP 三类归因分流校验 + LTV 分层 → BI 二次建模）；素材优化按版位拆——Shorts 强前 3 秒 + 降 CTA 弹窗撑满 10s，In-Stream 第 7~9 秒剧情拐点拉留存，AdMob 激励视频基本无 EVC 不纳入；tROAS 必须并入 EVC 营收；EVC vs 普通 VT 不可合并复盘；归因窗口安装 30 天 / 深度付费 60 天，不可盲目压缩；MMP 权责「部分纳入」——跨渠道口径/分层/反作弊/回传归 MMP，10s 触发阈值与 YouTube 原始埋点归 Google 原生。
 
+## [2026-07-12] create | 从 concepts 实体抽取：8 个高引用实体建 entity 页
+- 扫描全部 19 个 concept 页 + 3 个已有 entity 页 + 1 个 comparison 页，提取被多次引用但未独立建页的命名实体。
+- 按 centrality（被引用页数）排序，优先创建 8 个 entity 页：
+  - [[skadnetwork]] — SKAdNetwork/SKAN（9 页引用，最高频）
+  - [[idfa]] — Apple 广告标识符（6 页引用）
+  - [[att]] — AppTrackingTransparency（5 页引用）
+  - [[aem]] — Aggregated Event Measurement（5 页引用）
+  - [[uac]] — Universal App Campaign（5 页引用）
+  - [[onelink]] — AppsFlyer 归因链接产品（5 页引用）
+  - [[meta-pixel]] — Meta 前端 JS 埋点（3+ 页引用）
+  - [[af-smartscript]] — AppsFlyer H5 网页脚本（3 页引用）
+- 更新 index.md（26→34 pages），entity 区块从 3 条扩展到 11 条。
+- 每个新 entity 页均带 frontmatter、出站 wikilinks（≥2），与已有 concept 页双向交叉引用。
+
 ## [2026-07-12] ingest | iOS W2A vs Android 原生 A2A UAC 投放策略
 - Raw source: raw/articles/20260712-ios-w2a-vs-android-a2a-uac-strategy.md（对话整理稿，sha256 校验）
 - New comparison page: [[ios-w2a-vs-android-a2a]]

@@ -29,6 +29,8 @@ confidence: high
 2. 再营销 Campaign：单独启用再互动窗口，避免把老用户行为混入拉新质量评估。
 3. 每次改窗口必须记录日期；改动前后至少分段看 7-14 天，不要把窗口变化误判为素材或出价变化。
 
+> **注意区分**：本页讲的是 MMP 侧的归因回溯窗口（click/view lookback），与 [[uac-bidding-and-operations]] 中 Google Ads 内部的"转化窗口"（Conversion Window）是不同层面的概念。前者决定哪些触点能被归因，后者决定广告点击后多久内的转化被算法计入学习。
+
 ## 相关页面
 - [[google-vs-meta-integration]]
 - [[data-discrepancy-playbook]]
