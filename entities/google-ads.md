@@ -43,3 +43,6 @@ Google Ads 在 iOS 14+ 下不能按旧的设备 ID 逻辑理解所有库存。Go
 - [[google-ads-api]]
 - [[postback-and-event-mapping]]
 - [[data-discrepancy-playbook]]
+- [[evc-engaged-view-conversion]] — UAC 2.5 互动浏览转化指标。
+- [[creative-correlation-analysis]] — 素材特征与转化的双相关系数量化。
+- [[bayesian-beta-smoothing]] — 小样本转化率的贝叶斯平滑修正。

@@ -74,6 +74,7 @@ W2A 链路 iOS 归因兜底方案除了 H5 部署 AF 网页脚本缓存 af_click
 
 ## 相关页面
 - [[device-identifiers-and-privacy]]
+- [[ios-w2a-vs-android-a2a]] — SKAN/ATT 约束推导出 iOS W2A 优先的投放策略。
 - [[postback-and-event-mapping]]
 - [[event-source-scope-and-learning]]
 - [[data-discrepancy-playbook]]

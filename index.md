@@ -1,7 +1,7 @@
 # Wiki Index
 
 > Content catalog. Every wiki page listed under its type with a one-line summary.
-> Last updated: 2026-07-05 | Total pages: 21
+> Last updated: 2026-07-12 | Total pages: 26
 
 ## Entities
 - [[appsflyer]] — AppsFlyer 在归因、SDK 事件、渠道对接和数据治理中的角色。
@@ -11,6 +11,11 @@
 ## Concepts
 - [[agency-and-mcc-governance]] — 代理、Google MCC、Link ID、成本连接和数据权限的治理原则。
 - [[attribution-model]] — AppsFlyer 归因模型、确定性/概率归因、SRN 和再营销基础。
+- [[bayesian-beta-smoothing]] — 贝叶斯 Beta 共轭先验：全 UAC 小样本转化率（EVC/CPI/ROAS）通用修正方法。
+- [[creative-correlation-analysis]] — 皮尔逊+斯皮尔曼双相关系数：素材/出价/人群特征与转化的量化归因工具。
+- [[evc-engaged-view-conversion]] — Google UAC 2.5 互动浏览转化指标：定义、MMP 权责边界与数据观测口径。
+- [[evc-optimization-playbook]] — EVC 分版位素材优化、tROAS 出价、归因窗口校准与避坑清单。
+- [[ios-w2a-vs-android-a2a]] — iOS W2A vs Android 原生 A2A：UAC 投放平台差异化策略论证。
 - [[data-discrepancy-playbook]] — Google/Meta/AppsFlyer 数据差异排查顺序与常见原因。
 - [[device-identifiers-and-privacy]] — IDFA、IDFV、GAID、OAID 等设备标识符与隐私限制。
 - [[event-source-scope-and-learning]] — AppsFlyer 事件来源范围如何影响 Google/Meta 学习、客群匹配和 X Wallet 回传策略。
@@ -28,6 +33,7 @@
 ## Comparisons
 - [[af-vs-meta-capi]] — AppsFlyer 与 Meta CAPI 能力对比：为什么已有 AF 归因仍必须对接 CAPI，后端事件双向同步规则。
 - [[google-vs-meta-integration]] — Google Ads 与 Meta ads 在 AppsFlyer 中的对接差异和配置重点。
+- [[ios-w2a-vs-android-a2a]] — iOS W2A vs Android 原生 A2A：UAC 投放平台差异化策略。
 
 ## Queries
 - [[xwallet-implementation-checklist]] — 面向 X Wallet 的 AppsFlyer + Meta CAPI 配置落地清单。

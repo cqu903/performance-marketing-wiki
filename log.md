@@ -52,3 +52,21 @@
 - New comparison page: [[af-vs-meta-capi]]
 - Updated pages: [[meta-ads]], [[postback-and-event-mapping]], [[xwallet-event-taxonomy]], [[event-source-scope-and-learning]], [[ios-privacy-skan-aem]], [[xwallet-implementation-checklist]], index.md
 - Key synthesis: 已有 AF 归因仍必须对接 Meta CAPI——AF 是全局归因总账/渠道治理/反作弊，CAPI 是广告投放优化/EMQ 提升/深层转化回传，二者不可替代；信贷 W2A 标准化三层分流（H5 网页层 Pixel+CAPI+AF Web-S2S → App 层 AF SDK+postback 兜底 → 风控后端 CAPI+AF S2S 双向同步）；后端事件（授信/放款）严禁二选一上报；CAPI 携带加密手机号/fbclid/fbp 多维信号提升 EMQ 是 AF postback 无法实现的能力；iOS 无 IDFA 场景需 af_clickid 精准匹配 + CAPI 用户特征信号双向弥补。
+
+## [2026-07-12] ingest | UAC 全系投流量化分析实操手册
+- Raw source: raw/articles/20260712-uac-quantitative-analysis-handbook.md（本地文件摄入，sha256 校验）
+- New concept pages: [[evc-engaged-view-conversion]], [[creative-correlation-analysis]], [[bayesian-beta-smoothing]]
+- Updated pages: [[google-ads]]（追加 3 个相关页面反向链接），index.md（21→24 pages）
+- Key synthesis: EVC 是 UAC 2.5 优质流量信号，MMP 负责跨渠道口径统一/LTV 分层/反作弊，但不负责 10s 触发阈值（Google 原生规则）；皮尔逊（线性）+斯皮尔曼（单调非线性）双相关系数可量化素材/出价/人群特征对转化的驱动规律，区分「高流量垃圾素材」与「低流量优质素材」；贝叶斯 Beta 共轭先验（后验期望 α+k/(α+β+n)）是全 UAC 小样本转化率通用修正工具，转化样本 <100 时禁用原始指标；两套方法联动构成「大样本挖特征 / 小样本平滑评级」的双模型工作流，并可优化 RankScore 竞价的质量分与出价精度。
+
+## [2026-07-12] ingest | EVC 观测、优化实操与 MMP 归属解答
+- Raw source: raw/articles/20260712-evc-observation-optimization-mmp-scope.md（对话整理稿，sha256 校验）
+- New concept page: [[evc-optimization-playbook]]
+- Updated pages: [[evc-engaged-view-conversion]]（补三层观测操作细节、EVC vs VT 不可合并、MMP 四项职责 + 两项不属于），index.md（24→25 pages）
+- Key synthesis: EVC 观测分三层（Google Ads 原生看板拉 EVC 转化/CPA/ROAS → MMP 三类归因分流校验 + LTV 分层 → BI 二次建模）；素材优化按版位拆——Shorts 强前 3 秒 + 降 CTA 弹窗撑满 10s，In-Stream 第 7~9 秒剧情拐点拉留存，AdMob 激励视频基本无 EVC 不纳入；tROAS 必须并入 EVC 营收；EVC vs 普通 VT 不可合并复盘；归因窗口安装 30 天 / 深度付费 60 天，不可盲目压缩；MMP 权责「部分纳入」——跨渠道口径/分层/反作弊/回传归 MMP，10s 触发阈值与 YouTube 原始埋点归 Google 原生。
+
+## [2026-07-12] ingest | iOS W2A vs Android 原生 A2A UAC 投放策略
+- Raw source: raw/articles/20260712-ios-w2a-vs-android-a2a-uac-strategy.md（对话整理稿，sha256 校验）
+- New comparison page: [[ios-w2a-vs-android-a2a]]
+- Updated pages: [[w2a-data-flow]]、[[ios-privacy-skan-aem]]（追加反向链接），index.md（25→26 pages）
+- Key synthesis: SKAN 6bit + ATT 限制导致 iOS 原生 A2A 信号残缺（只能 D0、24-48h 窗口、IDFA 缺失），W2A 用 H5 前置转化信号（下载按钮点击、Web 注册）做对冲；Android 无隐私限制，原生 A2A 归因完整、tROAS 稳定，W2A 反而增损耗；UAC Campaign 强制分平台天然支持两套独立策略（iOS W2A + 浅层优化目标 / Android A2A + 深度事件 tROAS）；边界：iOS D0 付费产品（超休闲）可原生 A2A，安卓品牌种草可 W2A，其余按主策略。
