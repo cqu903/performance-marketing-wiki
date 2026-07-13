@@ -90,3 +90,6 @@
 - New concept page: [[deeplink-deferred-deeplink-limitations]]
 - Updated pages: [[install-attribution-matching]]、[[lookback-window-strategy]]、[[onelink]]（追加反向链接），index.md（38→39 pages）
 - Key synthesis: DDL 三项核心技术限制——① 热更新（OTA）在首次启动时打断"参数获取→路由跳转"串行链路，实例重建销毁已请求参数（React Native `Linking.getInitialURL()` 返回 null 为典型症状）；② 点击→首次启动间隔超过 15 分钟归因窗口，服务端主动销毁会话参数（DDL 概率匹配准确性随间隔指数下降）；③ 点击与首次启动 IP 不一致导致指纹哈希不匹配（4G/Wi-Fi 切换、VPN、共享 Wi-Fi、iOS Private Relay 均可触发）。三层缓解方案：确定性参数存储（服务端存参数+确定性 ID 取回）、多标识匹配（优先 Install Referrer/iOS Pasteboard 降 IP+UA 权重）、客户端本地补偿（参数加密存本地热更新后重读）。关键区分：DDL 15 分钟窗口 ≠ MMP 归因回溯窗口（Google 30 天/Meta 7 天），前者决定参数能否还原，后者决定触点能否归因。
+
+## [2026-07-13] query | Deferred Deep Link 技术限制查询
+- 用户问询 DDL 技术限制，已由专题页 [[deeplink-deferred-deeplink-limitations]] 完整覆盖，未新建 query 页（无新增综合）。
