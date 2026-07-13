@@ -84,3 +84,9 @@
 - New comparison page: [[ios-w2a-vs-android-a2a]]
 - Updated pages: [[w2a-data-flow]]、[[ios-privacy-skan-aem]]（追加反向链接），index.md（25→26 pages）
 - Key synthesis: SKAN 6bit + ATT 限制导致 iOS 原生 A2A 信号残缺（只能 D0、24-48h 窗口、IDFA 缺失），W2A 用 H5 前置转化信号（下载按钮点击、Web 注册）做对冲；Android 无隐私限制，原生 A2A 归因完整、tROAS 稳定，W2A 反而增损耗；UAC Campaign 强制分平台天然支持两套独立策略（iOS W2A + 浅层优化目标 / Android A2A + 深度事件 tROAS）；边界：iOS D0 付费产品（超休闲）可原生 A2A，安卓品牌种草可 W2A，其余按主策略。
+
+## [2026-07-13] ingest | Deep Link / Deferred Deep Link 技术限制排查解析
+- Raw source: raw/articles/20260713-deeplink-deferred-deeplink-technical-limitations.md（本地文件摄入，sha256: 42095ea2…）
+- New concept page: [[deeplink-deferred-deeplink-limitations]]
+- Updated pages: [[install-attribution-matching]]、[[lookback-window-strategy]]、[[onelink]]（追加反向链接），index.md（38→39 pages）
+- Key synthesis: DDL 三项核心技术限制——① 热更新（OTA）在首次启动时打断"参数获取→路由跳转"串行链路，实例重建销毁已请求参数（React Native `Linking.getInitialURL()` 返回 null 为典型症状）；② 点击→首次启动间隔超过 15 分钟归因窗口，服务端主动销毁会话参数（DDL 概率匹配准确性随间隔指数下降）；③ 点击与首次启动 IP 不一致导致指纹哈希不匹配（4G/Wi-Fi 切换、VPN、共享 Wi-Fi、iOS Private Relay 均可触发）。三层缓解方案：确定性参数存储（服务端存参数+确定性 ID 取回）、多标识匹配（优先 Install Referrer/iOS Pasteboard 降 IP+UA 权重）、客户端本地补偿（参数加密存本地热更新后重读）。关键区分：DDL 15 分钟窗口 ≠ MMP 归因回溯窗口（Google 30 天/Meta 7 天），前者决定参数能否还原，后者决定触点能否归因。

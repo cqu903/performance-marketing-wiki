@@ -1,7 +1,7 @@
 # Wiki Index
 
 > Content catalog. Every wiki page listed under its type with a one-line summary.
-> Last updated: 2026-07-12 | Total pages: 38
+> Last updated: 2026-07-13 | Total pages: 39
 
 ## Entities
 - [[af-smartscript]] — AppsFlyer H5 网页脚本：缓存 af_clickid 实现 iOS 无 IDFA 精准归因。
@@ -29,6 +29,7 @@
 - [[uac-algorithm-internals]] — UAC 算法内部解构：RankScore 公式、神经网络信号、冷启动贝叶斯解释、资产动态组合。
 - [[uac-bidding-and-operations]] — UAC 三阶段出价迁移（Max→tCPA→tROAS）、预算/窗口配置、检查清单与故障排查。
 - [[data-discrepancy-playbook]] — Google/Meta/AppsFlyer 数据差异排查顺序与常见原因。
+- [[deeplink-deferred-deeplink-limitations]] — Deep Link / DDL 三项技术限制（热更新阻断、15 分钟窗口、IP 指纹一致性）、排查路径与分层缓解方案。
 - [[device-identifiers-and-privacy]] — IDFA、IDFV、GAID、OAID 等设备标识符与隐私限制。
 - [[event-source-scope-and-learning]] — AppsFlyer 事件来源范围如何影响 Google/Meta 学习、客群匹配和 X Wallet 回传策略。
 - [[google-ads-api]] — Google Ads API 的适用场景、developer token、OAuth、客户端库和 X Wallet 自动化落地边界。

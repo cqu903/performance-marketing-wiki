@@ -54,4 +54,5 @@ OneLink 点击生成全局唯一 af_clickid。搭配 H5 落地页部署 [[af-sma
 - [[attribution-model]] — OneLink 归因链接对应的末次点击规则。
 - [[af-smartscript]] — H5 落地页缓存 af_clickid 的脚本产品。
 - [[ios-privacy-skan-aem]] — H5 跳转对 SKAN 注册稳定性的影响。
+- [[deeplink-deferred-deeplink-limitations]] — DDL 三项技术限制与排查路径（OneLink 是 DDL 的商用实现载体）。
 - [[w2a-data-flow]] — 信贷 W2A 链路中 OneLink 的数据流角色。

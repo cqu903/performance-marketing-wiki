@@ -35,3 +35,4 @@ confidence: high
 - [[google-vs-meta-integration]]
 - [[data-discrepancy-playbook]]
 - [[attribution-model]]
+- [[deeplink-deferred-deeplink-limitations]] — DDL 场景下的 15 分钟"点击→首开"匹配窗口（与本页 MMP 归因回溯窗口属不同层面）。
