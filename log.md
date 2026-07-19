@@ -93,3 +93,28 @@
 
 ## [2026-07-13] query | Deferred Deep Link 技术限制查询
 - 用户问询 DDL 技术限制，已由专题页 [[deeplink-deferred-deeplink-limitations]] 完整覆盖，未新建 query 页（无新增综合）。
+
+## [2026-07-19] update | Wiki 重命名：appsflyer-attribution-wiki → performance-marketing-wiki
+- 动因：wiki 实际范围早已超出 AppsFlyer 归因，覆盖完整效果营销（投放平台/代理/衡量/优化/政策），改名匹配实际领域。
+- GitHub repo 重命名：cqu903/appsflyer-attribution-wiki → cqu903/performance-marketing-wiki（gh repo rename）。
+- 本地目录：~/Documents/appsflyer-attribution-wiki → ~/Documents/performance-marketing-wiki。
+- git remote set-url origin 已更新。
+- 删除独立的 ~/Documents/ad-ops-wiki（仅有 1 份代理体系散文件，已并入本 wiki）。
+- SCHEMA.md 更新：Domain 改为"效果营销"，Tag Taxonomy 扩展（新增 dv360/tiktok/youtube/programmatic/bidding/targeting/creative/frequency-capping/brand-safety/spo/pmp/lift-testing/view-through/agency-tier/rebate/policy-change 等）。
+
+## [2026-07-19] ingest | DV360 与 Google Ads 对比、DV360 衡量与优化框架
+- 来源：用户上传 docx（~/Downloads/DV360与GoogleAds对比及衡量优化框架.docx）
+- Raw source: raw/articles/dv360-vs-google-ads-framework-2026.md（sha256: 33e4f54f…）
+- New wiki pages (3):
+  - [[dv360]] (entity) — DV360 平台实体
+  - [[dv360-vs-google-ads]] (comparison) — 全维度对比 + X Wallet 适用性结论
+  - [[dv360-optimization-framework]] (concept) — Floodlight 衡量体系、六类优化杠杆、2026 政策变更速览
+- Key synthesis: DV360 是 DSP、Google Ads 是效果引擎，互补非竞品；DV360 4 个独有杠杆（库存筛选/SPO/跨媒体频控/Custom Bidding）+ 3 层衡量（可见度/触达/增量）；post-view 不能忽视（只看 last-click 系统性低估 DV360）；X Wallet 月预算 HKD 50 万以 App 效果为主，DV360 开户门槛 ≥2.5 万美元/月+10-15% 平台费，短期性价比不高，除非进入品牌建设/CTV/DOOH 阶段。
+- 2026 硬性变更：Optimized Targeting 不再支持 Fixed Bidding（2025-03）、Floodlight 报表迁移 Instant Reporting（2026-06）、Audience Expansion→Lookalike（2026-06-15）、创意轮播弃用（2026-08-12）、Content Labels→Inventory Modes（2026-08，未完成映射将 unrestricted serving）。
+
+## [2026-07-19] ingest | 效果广告代理体系：中国分级 vs 海外官方认证（从 ad-ops-wiki 迁入）
+- 来源：原 ~/Documents/ad-ops-wiki/agency-tier-system.md（该目录已删除）
+- Raw source: raw/articles/agency-tier-system-raw.md（sha256: 5370e875…）
+- New wiki page: [[agency-tier-system]] (concept) — 中国一/二/三级代理 vs Google/Meta/TikTok 官方合作伙伴体系、返点机制、X Wallet 通过代理 vs 直投取舍。
+- 与 [[agency-and-mcc-governance]] 互补：前者商业关系层级，后者账户权限治理。
+- index.md（39→43 pages）

@@ -1,13 +1,14 @@
 # Wiki Index
 
 > Content catalog. Every wiki page listed under its type with a one-line summary.
-> Last updated: 2026-07-13 | Total pages: 39
+> Last updated: 2026-07-19 | Total pages: 43
 
 ## Entities
 - [[af-smartscript]] — AppsFlyer H5 网页脚本：缓存 af_clickid 实现 iOS 无 IDFA 精准归因。
 - [[aem]] — Meta Aggregated Event Measurement：iOS 14+ 聚合事件衡量方案与合格性要求。
 - [[appsflyer]] — AppsFlyer 在归因、SDK 事件、渠道对接和数据治理中的角色。
 - [[att]] — Apple AppTrackingTransparency：iOS 14.5+ IDFA 授权框架，iOS 隐私归因根因。
+- [[dv360]] — Google Marketing Platform 旗下 DSP：程序化媒体采买，白盒控制粒度，与 Google Ads 互补。
 - [[google-ads]] — Google Ads SRN 对接、Link ID、转化导入、事件回传和 MCC 治理。
 - [[idfa]] — Apple 广告标识符：点击/激活链路可用性、ATT 影响与无 IDFA 归因替代。
 - [[meta-ads]] — Meta ads SRN 对接、事件映射、AEM/iOS 隐私、CAPI 服务器端上报和数据差异重点。
@@ -18,6 +19,7 @@
 
 ## Concepts
 - [[agency-and-mcc-governance]] — 代理、Google MCC、Link ID、成本连接和数据权限的治理原则。
+- [[agency-tier-system]] — 中国大陆代理分级（一/二/三级）vs Google/Meta/TikTok 官方合作伙伴体系，返点机制与 X Wallet 取舍。
 - [[attribution-model]] — AppsFlyer 归因模型、确定性/概率归因、SRN 和再营销基础。
 - [[bayesian-beta-smoothing]] — 贝叶斯 Beta 共轭先验：全 UAC 小样本转化率（EVC/CPI/ROAS）通用修正方法。
 - [[creative-correlation-analysis]] — 皮尔逊+斯皮尔曼双相关系数：素材/出价/人群特征与转化的量化归因工具。
@@ -31,6 +33,7 @@
 - [[data-discrepancy-playbook]] — Google/Meta/AppsFlyer 数据差异排查顺序与常见原因。
 - [[deeplink-deferred-deeplink-limitations]] — Deep Link / DDL 三项技术限制（热更新阻断、15 分钟窗口、IP 指纹一致性）、排查路径与分层缓解方案。
 - [[device-identifiers-and-privacy]] — IDFA、IDFV、GAID、OAID 等设备标识符与隐私限制。
+- [[dv360-optimization-framework]] — DV360 衡量体系（Floodlight/可见度/触达/增量）、六类优化杠杆与 2026 平台政策变更。
 - [[event-source-scope-and-learning]] — AppsFlyer 事件来源范围如何影响 Google/Meta 学习、客群匹配和 X Wallet 回传策略。
 - [[google-ads-api]] — Google Ads API 的适用场景、developer token、OAuth、客户端库和 X Wallet 自动化落地边界。
 - [[install-attribution-matching]] — 商店无参数时 AF 的点击-安装匹配机制、IDFA 在点击/激活链路的可用性、无 IDFA 四层归因匹配。
@@ -45,6 +48,7 @@
 
 ## Comparisons
 - [[af-vs-meta-capi]] — AppsFlyer 与 Meta CAPI 能力对比：为什么已有 AF 归因仍必须对接 CAPI，后端事件双向同步规则。
+- [[dv360-vs-google-ads]] — DV360 与 Google Ads 全维度对比（定位/库存/出价/受众/转化追踪/控制粒度/开户门槛），含 X Wallet 适用性结论。
 - [[google-vs-meta-integration]] — Google Ads 与 Meta ads 在 AppsFlyer 中的对接差异和配置重点。
 - [[ios-w2a-vs-android-a2a]] — iOS W2A vs Android 原生 A2A：UAC 投放平台差异化策略。
 
