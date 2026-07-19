@@ -118,3 +118,11 @@
 - New wiki page: [[agency-tier-system]] (concept) — 中国一/二/三级代理 vs Google/Meta/TikTok 官方合作伙伴体系、返点机制、X Wallet 通过代理 vs 直投取舍。
 - 与 [[agency-and-mcc-governance]] 互补：前者商业关系层级，后者账户权限治理。
 - index.md（39→43 pages）
+
+## [2026-07-19] ingest | Google Ads 广告类型 × 适用目标信息图
+- 来源：用户提供中文信息图 `/Users/roy/Downloads/20260719-092222.png`（vision_analyze 提取）
+- Raw source: raw/articles/20260719-google-ads-types-by-goal-infographic.md（sha256: 8cecc04b…）
+- New wiki page: [[google-ads-types-by-goal]] (concept) — 9 种广告类型 × 8 种营销目标适用性矩阵、每种类型定位、决策速查、X Wallet 渠道取舍注释。
+- 交叉链接：[[google-ads]]、[[uac]]、[[uac-bidding-and-operations]]、[[uac-algorithm-internals]]、[[evc-optimization-playbook]]、[[dv360-vs-google-ads]]、[[agency-and-mcc-governance]]。
+- 关键决策：X Wallet 主力 UAC + Search 承接搜索意图；Demand Gen/Video 做种草与 EVC 协同；Display 再营销补足；PMax 价值有限（App 安装/内转化在矩阵里是"—"），仅跨渠道 Web 线索场景考虑；Shopping/本地/Smart 不适用。
+- index.md（43→44 pages）

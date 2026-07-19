@@ -1,7 +1,7 @@
 # Wiki Index
 
 > Content catalog. Every wiki page listed under its type with a one-line summary.
-> Last updated: 2026-07-19 | Total pages: 43
+> Last updated: 2026-07-19 | Total pages: 44
 
 ## Entities
 - [[af-smartscript]] — AppsFlyer H5 网页脚本：缓存 af_clickid 实现 iOS 无 IDFA 精准归因。
@@ -45,6 +45,7 @@
 - [[postback-and-event-mapping]] — 关键事件回传、Google 转化导入、Meta 事件映射、后端事件 AF postback vs CAPI 原生上报和验收。
 - [[w2a-data-flow]] — 信贷 W2A 标准化三层分流数据流：H5 网页层/App 层/风控后端，Meta CAPI 与 AF 双向并行。
 - [[xwallet-event-taxonomy]] — X Wallet 贷款 App 推荐事件字典、回传优先级和后端事件双向同步规则。
+- [[google-ads-types-by-goal]] — Google Ads 9 种广告类型 × 8 种营销目标适用性矩阵与 X Wallet 渠道取舍。
 
 ## Comparisons
 - [[af-vs-meta-capi]] — AppsFlyer 与 Meta CAPI 能力对比：为什么已有 AF 归因仍必须对接 CAPI，后端事件双向同步规则。
